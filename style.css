@@ -4,10 +4,32 @@
   box-sizing: border-box;
 }
 
+/* Mobile */
+
 body {
   background-image: url(./images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-color: hsl(257, 40%, 49%);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu-link {
+  margin-right: 10px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  /* text-decoration: none; */
+  color: white;
+  transition: 0.5s;
+}
+
+.menu-link:hover {
+  color: black;
 }
 
 main {
@@ -23,13 +45,13 @@ main {
 }
 
 .illustration-img {
-  width: 300px; 
+  width: 300px;
 }
 
 h1 {
   text-align: center;
   width: 300px;
-  padding: 50px 0 20px 0;
+  padding: 45px 0 20px 0;
   font-family: 'Poppins', sans-serif;
   color: white;
   font-size: 1.5rem;
@@ -62,55 +84,157 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: hsl(300, 69%, 71%);
+  background-color: black;
   color: whitesmoke;
   font-weight: 600;
 }
 
-footer {
+div.social-media {
   display: flex;
   justify-content: center;
-  padding: 20px 0 30px 0;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
 
-
 .github-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
-  padding: 5px;
+  width: 30px;
+  filter: invert(1);
+  margin: 0 1em;
 }
 
 .github-logo:hover {
-  border: 0.5px solid black;
-  border-radius: 100%;
-  cursor: pointer;
-  background-color: hsl(300, 69%, 71%);
+  filter: none;
+  transition: 0.5s;
 }
 .linkedin-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
-  padding: 5px;
+  width: 30px;
+  filter: invert(1);
+  margin: 0 1em;
 }
 
 .linkedin-logo:hover {
-  border: 0.5px solid black;
-  border-radius: 100%;
-  cursor: pointer;
-  background-color: hsl(300, 69%, 71%);
+  filter: none;
+  transition: 0.5s;
 }
-
 .instagram-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 20px;
-  padding: 5px;
+  width: 30px;
+  filter: invert(1);
+  margin: 0 1em;
 }
 
 .instagram-logo:hover {
-  border: 0.5px solid black;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: hsl(300, 69%, 71%);
+  filter: none;
+  transition: 0.5s;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+span {
+  text-align: center;
+  width: 300px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  filter: none;
+  transition: 0.5s;
+  opacity: 70%;
+}
+
+span:hover {
+  filter: invert(1);
+}
+/* Desktop */
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    padding-right: 50px;
+  }
+
+  .menu-link {
+    margin-right: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+  }
+
+  .logo {
+    padding-left: 80px;
+    padding-top: 50px;
+    width: 300px;
+  }
+
+  .illustration-img {
+    padding: 30px 0 0 30px;
+    width: 700px;
+  }
+
+  .about {
+    margin: 0 0 100px 50px;
+    text-align: justify;
+    line-height: 30px;
+  }
+
+  h1 {
+    text-align: left;
+    line-height: 40px;
+    font-size: 2em;
+    width: 450px;
+    margin-left: 20px;
+  }
+
+  p {
+    font-size: 1em;
+    text-align: left;
+    width: 500px;
+    margin-left: 20px;
+  }
+
+  .btn {
+    padding: 0;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  div.social-media {
+    margin-top: 50px;
+    justify-content: right;
+    padding: 50px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  span {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    width: 300px;
+  }
 }
